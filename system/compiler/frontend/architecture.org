@@ -1,0 +1,13 @@
+* Grease Compiler Frontend Overview
+
+** Organization
+   
+   
+   The idea is that a module traverses the filesystem under the source
+   directory first, spawning tokenizer/parser objects for each file
+   found, pointing to the appropriate namespace.  These all filter
+   into a tree representation of the code, which is then analysed into
+   the CFG representation for the next stage.
+   
+   At some point the namespaces are name-mangled into the relevant
+   symbols, rather than imposing structure on the code.

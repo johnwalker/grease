@@ -1,0 +1,11 @@
+* Structural Equivalence
+  When dealing with bundles, the language can do some implicit
+  conversion between different layouts.  If two bundles were to have
+  their types laid out as in a depth-first search, and have the
+  results be identical, then the two bundles are equivalent.  Put
+  another way, if the flattened types of two bundles are the same,
+  then the types of the bundles are equivalent.  This does not imply
+  anything about the actual scope heirarchy of a bundle tree, however.
+  In order to rearrange the heirarchy such that you can do positional
+  operations as if it were of a different structure, you need to do an
+  explicit typecast.

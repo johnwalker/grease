@@ -1,0 +1,71 @@
+* The Memory Queue
+  The memory queue acts as the arbiter of a given piece of memory.  It
+  provides facilities to support mutual exclusion to the scheduler.
+  Effectively, a memory queue is a task queue, where only one task can
+  be running at a time.  The compiler will generate code in each task
+  that goes on this queue to pull the next task off of the queue.
+  
+  There may be multiple memory queues associated with a given piece of
+  memory.  For example, if you have a large array of individual memory
+  structures, you might now want to lock all of the structures when
+  you only access one.  The compiler can generate memory queues for
+  each structure so that you can have concurrent access to the
+  elements so long as the array isn't being changed.
+
+** Local Queue
+   A piece of memory that cannot leave the hardware is considered
+   local, and will have a local queue associated with it.  This queue
+   will not have any of the constructs that would allow it to be
+   shared across machines.  This is useful for things like drivers,
+   where the hardware can only exist on one machine.
+
+** Sharable Queue
+   A memory queue that isn't referring to a resource that can only
+   exist on one piece of hardware is sharable.  This queue will have
+   some additional infomation attached to it.  It will have a list of
+   machines that have sync'd the queue, and a counter.
+   
+   For information on sharing a sharable memory queue, see <>.
+   
+*** TODO
+    Write article that discusses work stealing, and link it here.
+
+
+* Modifying the Memory Queue
+  As the memory queue is the arbiter of atomicity, modifications to it
+  must be handled with care.  Modifications to a memory queue are
+  discussed below.
+  
+** Pushing To a Queue
+   If the queue is local, this is as simple as setting some pointers.
+   The operation can easily be made atomic with a simple locking
+   mechanism, assuming that it isn't atomic already.
+   
+   If the queue is sharable, then things are more interesting.
+   Atomcity is guaranteed by the runtime now, but if 2 machines decide
+   to push at once, an order has to be decided upon.  This is done by
+   first broadcasting a message to all machines that have sync'd the
+   queue, notifying them about your identity, the task you want to
+   push, the queue you are pushing to, and the value of the queue
+   counter.
+   
+   If multiple messages come into a machine where the counter is
+   different for each message, and the values collectively lineraly
+   extend from the value on the local copy, all is well.  If multiple
+   messages arrive where the counter value is the same, or if a
+   counter value is skipped, then we now have a problem.
+   
+   Since it is truly arbitrary what order things on the mutex queue
+   get executed in, we execute a simple deterministic calculation to
+   generate an order.
+
+*** TODO 
+    Figure out what deterministic calculation will generate the order.
+
+** Popping From a Queue
+   Since only one task from a memory queue can be executed at a time,
+   and since the compiler generates the code for popping a value off
+   of the queue in each task that goes on the queue, it is impossible
+   for more than one machine to try to pop from the queue
+   simultaneously.  A simple broadcast for a sharable queue is
+   sufficient.  There will not be conflicts.

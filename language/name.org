@@ -1,0 +1,3 @@
+* Name
+  A name is an identifer that is used to tag a value and/or type.  You
+  assign names to variables using the colon ':' operator.

@@ -1,0 +1,10 @@
+* Directive
+  A directive is kindof like an operator, except that it imposes a
+  constraint on the code.
+
+** List of Directives
+   
+   | Name   | Description                                                 |
+   |--------+-------------------------------------------------------------|
+   | Order  | Allows a vectorized operation to be treated like a for-all. |
+   | Ensure | Provides assertions.                                        |

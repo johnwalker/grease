@@ -1,0 +1,11 @@
+* Micro Worker
+  The unit that actually gets all of thw work done is a tiny little
+  loop on each core that pulls things off of the active queue.  It can
+  only deal with things coming off of the active queue, however, so it
+  is up to the compiler to insert the code for doing anything else
+  into the tasks being executed.
+  
+  Since things on the active queue can require network communications
+  when they are executed and whatnot, the little worker will be
+  capable of looking through the meta information and sending network
+  requests as appropriate.

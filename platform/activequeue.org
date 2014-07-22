@@ -1,0 +1,19 @@
+* The Active Queue
+  The active queue is the queue from which tasks are directly
+  executed.  It's really a priority structure of queues, and each
+  queue is not strictly a queue, as a distributed system will
+  inevetably execute things out of order.
+
+** Pulling From The Active Queue
+   For the most part, this is a fairly straightforward process - pull
+   next thing off of the queue and execute - but if the next thing
+   happens to be a distributed task, then the micro worker has to do a
+   little extra work.
+
+** Notifying Sync'd Machines
+   Any machine that is capable of executing this task needs to know if
+   this task actually is getting executed.  Two things come of this.
+   One, if more than one machine tries to execute a task, some kind of
+   resolution needs to occur.  Two, for any of the task's possible
+   children there needs to be some machine that can execute that
+   child.

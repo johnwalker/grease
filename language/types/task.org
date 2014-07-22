@@ -1,0 +1,27 @@
+* Task Type
+  The task type is kindof a hybrid between a type and a typeclass.
+  Since tasks can have typeclasses as arguments and return types, a
+  task type may not be definite.
+  
+  A task type specifies the argument type, the return type, and the
+  fact that it is, in fact, a task.
+  
+** Syntax
+   Syntactically, a task type is the argument type followed by the
+   keyword 'task' followed by the return type.
+   
+   If I had a task that took a vector of integral types, and returned
+   an integral type for example, the type would be represented as
+   follows.
+   
+#+BEGIN_SRC Grease
+[] integral task integral
+#+END_SRC
+   
+   If you choose to rely on structural equivelance, and you want more
+   separation between the different elements of the type, the
+   following is also acceptable.
+   
+#+BEGIN_SRC Grease
+([] integral) task (integral)
+#+END_SRC

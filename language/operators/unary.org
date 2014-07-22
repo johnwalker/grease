@@ -1,0 +1,13 @@
+* Unary Operators
+  
+  | Name        | Symbol | Argument Type  | Return Type    | Short Description                           |
+  |-------------+--------+----------------+----------------+---------------------------------------------|
+  | Negate      | -      | Numeric Signed | Numeric Signed | Returns the negative of the argument        |
+  | Dereference | *      | & Track        | Track          | Returns the data pointed to by the argument |
+  | Reference   | &      | Track          | & Track        | Returns a reference to the argument         | 
+
+** Notes
+
+*** Reference
+    Any attempt to obtain a reference to memory that was not
+    dynamically allocated will result in a compiler error.

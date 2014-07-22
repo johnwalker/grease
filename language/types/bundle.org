@@ -1,0 +1,58 @@
+* Bundle Type Class
+  The bundle type class allows you to specify a bundle as an argument,
+  optionally with certain guarantees about the bundle's properties.
+
+** Asking For Names
+   If you follow the keyword 'bundle' with a bundle of types and
+   names, the bundle is not interpreted as a normal bundle, but as a
+   contract to be imposed on the bundle that is referred to.  The
+   types and names define an interface.  Any bundle that is put in a
+   variable of that type will have to provide variables with those
+   type and name combinations - but not necessarily in that order, and
+   there may be additional elements in the provided bundle.  This
+   allows you to duck-type a bundle's contents by creating it, and
+   then calling functions with contractual templates on the bundle.
+
+*** Example
+    Here is an example of a task that uses a contractual bundle type
+    class to specify the arguments.
+    
+#+BEGIN_SRC Grease
+ensure (
+    :&: bundle (int :size, int: capacity, :&: [] bundle :elements) :struct
+)
+{
+    
+    # dynamically expand 'elements' if there is not enough room
+    (
+        |||,
+        {
+            (capacity, 1) << :capacity;
+            (elements, capacity) resize :elements;
+            (capacity, elements) :return;
+        }
+    ) [struct -> size >= struct -> capacity] :memaction;
+    (struct -> capacity, struct -> elements) memaction :results;
+    results . capacity :struct::capacity;
+    results . elements :struct::elements;
+    
+    # return the next element and increment size
+    struct -> elements (& [struct -> capacity] bundle) *
+        [struct -> size] & :return;
+    (struct -> size, 1) + :struct::size;
+    
+}
+ensure (& track)
+:push;
+#+END_SRC
+
+**** TODO
+     This code was a tad difficult to write.  I think it is obvious
+     that some syntax sugar is needed for unpacking bundles into
+     variables in the outer scope.  We may also want syntax sugar for
+     conditionals, although I maintain that the solution achieved in
+     this piece of code isn't that bad in that departnemt.
+     
+     Some things are broken though.  If I don't *require* any type
+     information to open a junction, then how do I specify that I am
+     writing to and reading from memory?

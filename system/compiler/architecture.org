@@ -1,0 +1,7 @@
+* Compiler Architecture
+  The compiler architecture refers to the architecture of the compiler
+  system.
+
+*** TODO
+    This can get fleshed out when we actually have a parser or
+    something

@@ -1,0 +1,19 @@
+* Binary Operators
+  
+  | Name                  | Symbol | Argument Type | Return Type | Short Description                                                       |
+  |-----------------------+--------+---------------+-------------+-------------------------------------------------------------------------|
+  | Divide                | /      | Numeric       | Numeric     | Returns the quotient of arguments                                       |
+  | Modulus               | %      | Integral      | Integral    | Returns the remainder of arguments                                      |
+  | Less Than             | <      | Numeric       | Integral    | Returns '1' if first argument is less than second, and '0' otherwise    |
+  | Greater Than          | >      | Numeric       | Integral    | Returns '1' if first argument is greater than second, and '0' otherwise |
+  | Less Than Or Equal    | <=     | Numeric       | Integral    | Inversion of Greater Than '>'                                           |
+  | Greater Than Or Equal | >=     | Numeric       | Integral    | Inversion of Less Than '<'                                              |
+  | Left Shift            | <<     | Integral      | Integral    | Returns the first argument shifted left by the second argument bits     |
+  | Right Shift           | >>     | Integral      | Integral    | Returns the first argument shifted right by the second argument bits    |
+  | Left Rotate           | <<%    | Integral      | Integral    | Returns the first argument rotated left by the second argument bits     |
+  | Right Rotate          | >>%    | Integral      | Integral    | Returns the first argument rotated right by the second argument bits    | 
+
+** Notes
+
+*** Right Shift
+    If the first operand is signed, then the shift is signed.

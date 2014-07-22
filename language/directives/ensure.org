@@ -1,0 +1,8 @@
+* Ensure
+  This directive provides static assertions to the language.
+  
+  The ensure directive operates on a stream.  Immediately following
+  the ensure keyword is a variable that contains type and/or name
+  information to be statically checked.  If the types or names do not
+  match, the compiler generates an error.
+  

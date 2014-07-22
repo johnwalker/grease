@@ -1,0 +1,22 @@
+* Reduction Operators
+  
+  | Name               | Symbol     | Argument Type | Return Type | Short Description                                                                           |
+  |--------------------+------------+---------------+-------------+---------------------------------------------------------------------------------------------|
+  | Equal              | =          | Numeric       | Integral    | Returns '1' if all of the elements in the vector are equal, and '0' otherwise               |
+  | Not Equal          | !=         | Numeric       | Integral    | Inversion of Equal '='                                                                      |
+  | Logical Or         | \vert\vert | Numeric       | Integral    | Returns '1' if any element in the vector is nonzero, and '0' otherwise                      |
+  | Logical And        | &&         | Numeric       | Integral    | Returns '1' if all of the elements in the vector are nonzero, and '0' otherwise             |
+  | Logical Xor        | ^^         | Numeric       | Integral    | Returns '1' if there are an odd number of nonzero elements in the vector, and '0' otherwise |
+  | Logical Population | ??         | Numeric       | Integral    | Returns the number of nonzero elements in the vector                                        |
+  | Sum                | +          | Numeric       | Numeric     | Returns the sum of all of the elements in the vector                                        |
+  | Average            | +/         | Numeric       | Numeric     | Returns the average of all of the elements in the vector                                    |
+  | Min                | ?<         | Numeric       | Numeric     | Returns the minimum element from the vector                                                 |
+  | Max                | ?>         | Numeric       | Numeric     | Returns the maximum element from the vector                                                 |
+  | Bitwise Or         | \vert      | Integral      | Integral    | Returns the bitwise or of all of the elements in the vector                                 |
+  | Bitwise And        | &          | Integral      | Integral    | Returns the bitwise and of all of the elements in the vector                                |
+  | Bitwise Xor        | ^          | Integral      | Integral    | Returns the bitwise xor of all of the elements in the vector                                |
+
+** Notes
+
+*** Average
+    The average operator cannot overflow

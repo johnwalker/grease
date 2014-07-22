@@ -1,0 +1,55 @@
+* Type System
+
+** Fundamental Types
+
+*** Float
+    The float type is intended to be represented internally by one of
+    the IEEE 754 binary floating point representations.
+
+*** Int
+    The int type is your standard binary integer.
+
+** Modifier Types
+   These types are not much of a type on their own, but allow the
+   programmer to specify more complicated and distributed structures
+   very easily.  In order to be meaningful, you have to use a complete
+   type as a modifier.
+
+*** Reference
+    A reference is your ticket to persistent and shared memory.  This
+    is how you would build large and complicated data structures that
+    reside in memory for modification via side-effects.
+
+*** Vector
+    A vector is a piece of memory that is linearly packed with
+    elements of the modifier type.  This is useful for lists and
+    table.
+
+** Type Classes
+   In order to write more generic functions, type classes are
+   provided.  They do not directly map to a specific type, but can
+   accept any type that fulfills certain properties.
+   
+*** Integral
+    Basically, an alias for the various integer types available.  This
+    is width-generic, so you can use this to write width-independent
+    mathematical functions.
+
+*** Numeric
+    Not all numbers can take bit-shifts, so we have a type class for
+    all numeric types.
+
+*** Track
+    This type is rather opaque, unless you impose further
+    requirements.  Mostly this is good for what you would normally use
+    variadic functions for, but can also be used for duck-typing based
+    on required data.
+
+** Tasks
+   Task types are special.  Since they are ultimately based on the
+   argument and return types, they can be a concrete type while
+   fundamentally a part of them is a typeclass.  Also, since a task
+   with argument and return types more specific than a given task
+   variable's types can be assigned to said variable, a task with
+   type classes as argument and return types can also at the same time
+   be a type class.

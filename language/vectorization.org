@@ -1,0 +1,13 @@
+* Vectorization
+  Vectorization is a language feature that allows tasks to be executed
+  across vectors.  It is triggered when one or more arguments to a
+  task are in a vector form of the type that the task is looking
+  for.
+  
+  If different arguments are vectors of differing dimensions, then the
+  first dimension of the vectors are expanded until the types match
+  the required types of the task.  The sizes of the first dimensions
+  of all expandable vectors must match.
+  
+  If not all arguments are in vector form, then they will be
+  duplicated for each execution of the task.

@@ -1,0 +1,3 @@
+* Value
+  A 'value' is an abstract concept referring to the actual value of a
+  variable.  This is separate from it's name and type.

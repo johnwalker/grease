@@ -1,0 +1,16 @@
+* Vector Operators
+  These are a special class of binary operator that take a vector as
+  the first argument, and an integral type as the second.  The return
+  type is always a vector of the same size as the original.
+  
+  | Name                | Symbol | Short Description                                                      |
+  | Vector Left Shift   | [<<]   | Shifts all of the elements in the vector left by the second argument   |
+  | Vector Right Shift  | [>>]   | Shifts all of the elements in the vector right by the second argument  |
+  | Vector Left Rotate  | [<<%]  | Rotates all of the elements in the vector left by the second argument  |
+  | Vector Right Rotate | [>>%]  | Rotates all of the elements in the vectos right by the second argument |
+
+** Notes
+ 
+*** Vector Shifts
+    The empty spaces are replaced with the value '0' in both shifts.
+    No, vectors are not signed.

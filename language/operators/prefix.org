@@ -1,0 +1,16 @@
+* Prefix Operators
+  Prefix operators operate on the current state of the stream, and
+  take a name as an argument.
+  
+  | Name  | Symbol | Short Description                                                                                                  |
+  |-------+--------+--------------------------------------------------------------------------------------------------------------------|
+  | Colon | :      | Assigns the name that follows to the variable, allowing that variable to be referred to elsewhere within the scope |
+  | Dot   | .      | Replaces the current variable with the value in the track attached to the name that follows                        |
+  | Arrow | ->     | Basically a macro for '* .'                                                                                        |
+
+** Notes
+
+*** Colon
+    The colon does not require anything to be in the variable in order
+    to be used, which would be useful for declaring a variable name
+    before you use it.

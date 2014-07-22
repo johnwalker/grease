@@ -1,0 +1,69 @@
+* Operators
+  Operators are the fundamental building blocks of any program.  They
+  are tasks with special names that are built in to the compiler.
+  They also happen to be the only thing that survives when the
+  compiler finishes converting into the internal representation for
+  optimization.
+
+** Operator Precendence
+   Evaluation of all of the things is strict left-to-right.
+
+** List of Operators
+   
+*** Unary Operators
+    
+    | Name        | Symbol |
+    |-------------+--------|
+    | Negate      | -      |
+    | Defererence | *      |
+    | Reference   | &      |
+
+*** Binary Operators
+    
+    | Name                 | Symbol |
+    |----------------------+--------|
+    | Divide               | /      |
+    | Modulus              | %      |
+    | Less Than            | <      |
+    | Greater Than         | >      |
+    | Less Than Or Equal   | <=     |
+    | Greter Than Or Equal | >=     |
+    | Left Shift           | <<     |
+    | Right Shift          | >>     |
+    | Left Rotate          | <<%    |
+    | Right Rotate         | >>%    |
+
+**** Vector Operators
+     
+     | Name         | Symbol |
+     |--------------+--------|
+     | Left Shift   | [<<]   |
+     | Right Shift  | [>>]   |
+     | Left Rotate  | [<<%]  |
+     | Right Rotate | [>>%]  |
+
+*** Reduction Operators
+     
+    | Name               | Symbol         |
+    |--------------------+----------------|
+    | Equal              | \=             |
+    | Not Equal          | !=             |
+    | Logical Or         | \vert{}\vert{} |
+    | Logical And        | &&             |
+    | Logical Xor        | ^^             |
+    | Logical Population | ??             |
+    | Add/Collect        | +              |
+    | Average            | +/             |
+    | Min                | ?<             |
+    | Max                | ?>             |
+    | Bitwise Or         | \vert          |
+    | Bitwise And        | &              |
+    | Bitwise Xor        | ^              |
+
+*** Prefix Operators
+    
+    | Name  | Symbol |
+    |-------+--------|
+    | Dot   | .      |
+    | Arrow | ->     |
+    | Colon | :      |
