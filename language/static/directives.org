@@ -1,6 +1,6 @@
 * Directive
-  A directive is kindof like an operator, except that it imposes a
-  constraint on the code.
+  A directive is a construct that provides the compiler information
+  that statically alters or constrains the code.
 
 ** List of Directives
    

@@ -34,6 +34,8 @@
     | Right Rotate         | >>%    |
 
 **** Vector Operators
+     Vector operators are a subset of binary operators where the first
+     argument is a vector, and the second argument is an integer.
      
      | Name         | Symbol |
      |--------------+--------|
@@ -46,7 +48,7 @@
      
     | Name               | Symbol         |
     |--------------------+----------------|
-    | Equal              | \=             |
+    | Equal              | =              |
     | Not Equal          | !=             |
     | Logical Or         | \vert{}\vert{} |
     | Logical And        | &&             |

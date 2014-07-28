@@ -1,0 +1,5 @@
+#+PROPERTY: depends
+#+PROPERTY: provides bundles
+
+* Bundle
+  A bundle is a semantically ordered tuple of values.

@@ -1,3 +1,0 @@
-* Vector
-  A vector is a bundle where all of the variables are of the same
-  type.

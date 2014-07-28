@@ -1,3 +1,0 @@
-* Task
-  A task is an operator or a series of operators that lack the initial
-  value that would make them a task stream.

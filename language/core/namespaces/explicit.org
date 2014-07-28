@@ -1,0 +1,7 @@
+#+PROPERTY: depends
+#+PROPERTY: provides "explicit namespaces"
+
+* Explicit Namespaces
+  The explicit namespace hierarchy is created as a function of the
+  directory structure of the code.  By default, each directory
+  represents a namespace of the same name.

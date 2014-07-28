@@ -1,0 +1,23 @@
+* Order Directive
+  The order directive allows you to modify the vectorization behavior
+  of a task.  If you want to perform an ordered operation over all of
+  the elements of a vector, then the easiest way is to use an order
+  directive.
+
+** Syntax
+   The directive itself is the keyword 'order' followed by a bundle
+   containing names.  The first name is the name of the vector to
+   iterate over in order, and the following elements are any shared
+   resources that you would like the construct to have atomic access
+   to.
+
+*** Example
+    The followint example shows how to print out all of the elements
+    if an array in order, and uninterrupted.  Note that without the
+    'stdout' srgument, another print statement could print to stdout
+    in the middle of this operation.
+    
+#+BEGIN_SRC Grease
+(0..10) :a;
+(stdout, a) order (a, stdout) printint;
+#+END_SRC

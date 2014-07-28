@@ -1,0 +1,29 @@
+#+PROPERTY: requires "basic_syntax"
+#+PROPERTY: provides "types"
+
+* Type System
+  
+
+** Float
+   
+
+** Int
+   
+
+** Reference
+   
+
+** Vector
+   
+
+** Track
+   
+
+** Tasks
+   
+
+** Integral
+   
+
+** Numeric
+   

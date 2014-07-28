@@ -1,0 +1,8 @@
+#+PROPERTY: depends names
+#+PROPERTY: provides namespaces
+
+* Namespace
+  A namespace is a conveniant way of organizing names.  There are two
+  kind of namespaces.  Explicit namespaces are created by the
+  filesystem hierarchy.  Implicit namespaces are creeated for each
+  bundle.

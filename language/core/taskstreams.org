@@ -1,0 +1,8 @@
+#+PROPERTY: depends tasks values
+#+PROPERTY: provides "task streams"
+
+* Task Streams
+  A task stream is the basic unit of code.  Syntactically, it is an
+  initial value followed optionally by a task, and then terminated by
+  a semicolon.  Code is nothing more than task streams split up into
+  files, and then organized into namespaces.

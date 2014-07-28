@@ -1,0 +1,6 @@
+#+PROPERTY: depends values
+#+PROPERTY: provides names
+
+* Names
+  A name is a handle that can be attached to a value.  The name
+  becomes an alias for the value.

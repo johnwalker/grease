@@ -1,2 +1,0 @@
-* Bundle
-  A bundle is an ordered tuple of variables.

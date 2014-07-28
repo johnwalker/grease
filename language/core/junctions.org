@@ -1,0 +1,11 @@
+#+PROPERTY: depends bundles namespaces tasks
+#+PROPERTY: provides junctions
+
+* Junction
+  A junction is a task that allows the programmer to operate on the
+  elements inside of a bundle by name, rather than by position.  All
+  names in the bundle's implicit namespace are made available directly
+  in the junction.
+
+** Syntax
+   A junction is a list of task streams inside of curly braces '{}'.

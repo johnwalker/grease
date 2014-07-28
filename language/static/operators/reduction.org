@@ -19,4 +19,4 @@
 ** Notes
 
 *** Average
-    The average operator cannot overflow
+    The average operator cannot overflow.

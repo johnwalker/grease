@@ -1,3 +1,0 @@
-* Task Stream
-  A task stream is an initial value followed optionally by a task and
-  then terminated with a semicolon ';'.

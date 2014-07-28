@@ -1,0 +1,4 @@
+* Tasks
+  A task is a value that represents an operation.  A task takes a
+  value as an argument, and returns a new value.  Syntactically, two
+  tasks chained together are also a task.

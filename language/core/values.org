@@ -1,0 +1,6 @@
+#+PROPERTY: depends
+#+PROPERTY: provides values
+
+* Values
+  A value is something that can be operated on.  A value may have
+  meta-information associated with it, which is also a value.

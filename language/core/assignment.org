@@ -1,0 +1,11 @@
+#+PROPERTY: depends names values tasks
+#+PROPERTY: provides assignment
+
+* Assignment
+  To assign a value to a name, you must create an assignment task with
+  the assignment operator.  Prefix the name you want to attach to the
+  value with the assignment operator to create the task.
+
+** TODO Remove references to 'create' here.
+   I don't think that I'm really creating anything.  I think I need to
+   come up with another way to describe this feature.

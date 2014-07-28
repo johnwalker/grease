@@ -17,3 +17,7 @@
 
 *** Right Shift
     If the first operand is signed, then the shift is signed.
+
+** Vector Operators
+   Vector operators are a subset of binary operators.  They are
+   [[file:binary/vector.org][documented separately]].

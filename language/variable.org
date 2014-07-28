@@ -1,4 +1,0 @@
-* Variable
-  A variable is a container for varying state (No shit Sherlock...).
-  A variable can contain a type, a name, a value, or any combination
-  of the aforementioned.

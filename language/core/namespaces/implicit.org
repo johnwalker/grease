@@ -1,0 +1,7 @@
+#+PROPERTY: depends bundles
+#+PROPERTY: provides "implicit namespaces"
+
+* Implicit Namespaces
+  An implicit namespace is created for every bundle.  This namespace
+  is anonymous, and does not capture anything from any enclosing
+  implicit namespace.
